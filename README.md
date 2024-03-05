@@ -9,3 +9,7 @@ This rubot_mecanum workspace is organized in the following sections:
 | 5. rUBot  Projects | SW and HW projects |
 | 
 
+Make launch files executable:
+```{sh}
+source ~/rUBot_mecanum_ws/devel/setup.bash
+```
