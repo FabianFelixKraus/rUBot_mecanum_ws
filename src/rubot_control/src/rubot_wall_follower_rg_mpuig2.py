@@ -60,7 +60,7 @@ def take_action(regions):
     elif regions['fright'] < d:
         state_description = 'case 3 - fright'
         linear_x = vx
-        angular_z = wz
+        angular_z = 0
     elif regions['front'] > d and regions['right'] < d:
         state_description = 'case 4 - right'
         linear_x = vx

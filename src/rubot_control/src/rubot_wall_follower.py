@@ -60,7 +60,7 @@ def take_action(regions):
     elif regions['fright'] < d:
         state_description = 'case 3 - fright'
         linear_x = vx
-        angular_z = wz
+        angular_z = 0
     elif regions['front'] > d and regions['right'] < d:
         state_description = 'case 4 - right'
         linear_x = vx
@@ -75,6 +75,8 @@ def take_action(regions):
         angular_z = 0
 
     rospy.loginfo(state_description)
+    rospy.loginfo("x-speed = %5.2f && z-rotation-speed = %5.1f", msg.linear.x, msg.angular.z)
+    rospy.loginfo("--------------------------------\n")
     msg.linear.x = linear_x
     msg.angular.z = angular_z
     pub.publish(msg)
